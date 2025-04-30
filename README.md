@@ -10,6 +10,15 @@
 A lightweight and privacy-focused Chrome Extension that notifies you about <b>new Galxe tasks</b> — ideal for <i>crypto airdrop hunters</i> who never want to miss a quest again.
 </p>
 
+<p align="center">
+  <a href="#-features">Features</a> •
+  <a href="#-installation">Installation</a> •
+  <a href="#-setup-instructions">Setup</a> •
+  <a href="#-privacy--security">Privacy</a> •
+  <a href="#-how-it-works">How It Works</a> •
+  <a href="#-faq">FAQ</a>
+</p>
+
 ---
 
 ## 🧠 What It Does
@@ -20,49 +29,95 @@ A Chrome Extension that connects to Galxe's official GraphQL API to monitor sele
 
 ## ✨ Features
 
-- 🔍 **Galxe API Integration**  
-  Connects directly to Galxe's GraphQL API (`https://graphigo.prd.galaxy.eco`) to monitor quests
-
-- 🎯 **Targeted Project Tracking**  
-  You choose which **Galxe Spaces** (projects) to follow
-
-- 🔔 **Browser Notifications**  
-  Alerts you the moment a new task is added
-
-- 🧩 **Badge Indicator**  
-  Displays "NEW" on the extension icon when updates are available
-
-- 🔐 **Wallet-Free**  
-  No wallet connection required — 100% read-only
-
-- 🔒 **Secure & Private**  
-  API token stored locally. No data is sent to any server (more below 👇)
+<table>
+  <tr>
+    <td width="50%">
+      <h3>🔍 Galxe API Integration</h3>
+      <p>Connects directly to Galxe's GraphQL API to monitor quests in real-time</p>
+    </td>
+    <td width="50%">
+      <h3>🎯 Targeted Project Tracking</h3>
+      <p>You choose which <b>Galxe Spaces</b> (projects) to follow</p>
+    </td>
+  </tr>
+  <tr>
+    <td width="50%">
+      <h3>🔔 Browser Notifications</h3>
+      <p>Alerts you the moment a new task is added</p>
+    </td>
+    <td width="50%">
+      <h3>🧩 Badge Indicator</h3>
+      <p>Displays "NEW" on the extension icon when updates are available</p>
+    </td>
+  </tr>
+  <tr>
+    <td width="50%">
+      <h3>🔐 Wallet-Free</h3>
+      <p>No wallet connection required — 100% read-only</p>
+    </td>
+    <td width="50%">
+      <h3>🔒 Secure & Private</h3>
+      <p>API token stored locally. No data is sent to any server</p>
+    </td>
+  </tr>
+</table>
 
 ---
 
 ## 🛠️ Installation
 
-### 🌍 Chrome Web Store (Recommended for Public Use)
+### 🌍 Chrome Web Store (Recommended- SOON)
 
-> 🔔 For end users, the extension should be [published on the Chrome Web Store](https://chrome.google.com/webstore/) for easy updates and installation.  
+<p align="center">
+  <a href="https://chrome.google.com/webstore/">
+    <img src="https://developer.chrome.com/static/docs/webstore/branding/image/iNEddTyWiMfLSwFD6qGq.png" alt="Available in the Chrome Web Store" width="250">
+  </a>
+</p>
+
+> For the best experience and automatic updates, install the extension directly from the Chrome Web Store.
+> 
+> ⚠️ **Important**: This extension should only be installed from the official Chrome Web Store to ensure security and receive automatic updates.
+
+### 🧪 Developer Installation (Manual- SOON )
+
+1. Clone or download this repository
+2. Open Chrome and navigate to `chrome://extensions/`
+3. Enable **Developer Mode** (toggle in top-right corner)
+4. Click **Load unpacked**
+5. Select the project root folder
 
 ---
 
 ## ⚙️ Setup Instructions
 
-1. **Get Your Galxe API Token**  
-   - Log in to [Galxe](https://galxe.com)  
-   - Go to your Account Settings  
-   - Copy your **access-token**
+<details open>
+<summary><b>1. Get Your Galxe API Token</b></summary>
+<br>
+<ul>
+  <li>Log in to <a href="https://galxe.com">Galxe</a></li>
+  <li>Go to your Account Settings</li>
+  <li>Copy your <b>access-token</b></li>
+</ul>
+</details>
 
-2. **Configure Extension**  
-   - Click the extension icon  
-   - Open Settings  
-   - Paste your token and save
+<details open>
+<summary><b>2. Configure Extension</b></summary>
+<br>
+<ul>
+  <li>Click the extension icon</li>
+  <li>Open Settings</li>
+  <li>Paste your token and save</li>
+</ul>
+</details>
 
-3. **Add Projects (Spaces)**  
-   - Enter project aliases (e.g., `binance`, `layerzero`)  
-   - Click **Add**
+<details open>
+<summary><b>3. Add Projects (Spaces)</b></summary>
+<br>
+<ul>
+  <li>Enter project aliases (e.g., <code>binance</code>, <code>layerzero</code>)</li>
+  <li>Click <b>Add</b></li>
+</ul>
+</details>
 
 That's it! The extension will check for new tasks every 5 minutes and notify you instantly.
 
@@ -76,11 +131,22 @@ That's it! The extension will check for new tasks every 5 minutes and notify you
 
 We take your security seriously:
 
-- ✅ No wallet connection  
-- ✅ No access to private keys  
-- ✅ No external tracking  
-- ✅ No data sent to our servers  
-- ✅ Everything is stored **locally in your browser**
+<div align="center">
+  <table>
+    <tr>
+      <td align="center">✅ No wallet connection</td>
+      <td align="center">✅ No access to private keys</td>
+    </tr>
+    <tr>
+      <td align="center">✅ No external tracking</td>
+      <td align="center">✅ No data sent to our servers</td>
+    </tr>
+  </table>
+</div>
+
+<p align="center">
+  <b>Everything is stored locally in your browser</b>
+</p>
 
 Only your Galxe `access-token` and project list are saved in `chrome.storage.local`.  
 All interactions are made directly with the official Galxe API.
@@ -89,10 +155,26 @@ All interactions are made directly with the official Galxe API.
 
 ## 🧪 How It Works
 
-- Polls Galxe every **5 minutes**
-- Tracks your selected projects for quest updates
-- Checks task `credential.id` and `lastUpdate` timestamps
-- Sends browser notifications and updates badge when new tasks are found
+<div align="center">
+  <table>
+    <tr>
+      <td align="center">⏱️</td>
+      <td>Polls Galxe every <b>5 minutes</b></td>
+    </tr>
+    <tr>
+      <td align="center">🔍</td>
+      <td>Tracks your selected projects for quest updates</td>
+    </tr>
+    <tr>
+      <td align="center">🔄</td>
+      <td>Checks task <code>credential.id</code> and <code>lastUpdate</code> timestamps</td>
+    </tr>
+    <tr>
+      <td align="center">🔔</td>
+      <td>Sends browser notifications and updates badge when new tasks are found</td>
+    </tr>
+  </table>
+</div>
 
 You can view updates by clicking the icon or notification, which opens the corresponding Galxe quest.
 
@@ -100,46 +182,83 @@ You can view updates by clicking the icon or notification, which opens the corre
 
 ## 🧰 Developer Info
 
-- 💻 GitHub (Main): [@xPOURY4](https://github.com/xPOURY4)  
-- 🛠️ GitHub (Team): [HexQuant-hub](https://github.com/HexQuant-hub)  
-- 🐦 Twitter: [@therealpourya](https://x.com/therealpourya)
+<div align="center">
+  <table>
+    <tr>
+      <td align="center">💻</td>
+      <td>GitHub (Main)</td>
+      <td><a href="https://github.com/xPOURY4">@xPOURY4</a></td>
+    </tr>
+    <tr>
+      <td align="center">🛠️</td>
+      <td>GitHub (Team)</td>
+      <td><a href="https://github.com/HexQuant-hub">HexQuant-hub</a></td>
+    </tr>
+    <tr>
+      <td align="center">🐦</td>
+      <td>Twitter</td>
+      <td><a href="https://x.com/therealpourya">@therealpourya</a></td>
+    </tr>
+  </table>
+</div>
 
 ---
 
 ## ❓ FAQ
 
-> **Q: Does this extension connect to my wallet?**  
-> A: No. It is 100% read-only and never asks for wallet access.
+<details>
+<summary><b>Does this extension connect to my wallet?</b></summary>
+<br>
+No. It is 100% read-only and never asks for wallet access.
+</details>
 
-> **Q: Where is my data stored?**  
-> A: In your browser’s local storage — never sent to a server.
+<details>
+<summary><b>Where is my data stored?</b></summary>
+<br>
+In your browser's local storage — never sent to a server.
+</details>
 
-> **Q: Can I use this on mobile?**  
-> A: No. Chrome Extensions currently only work on desktop browsers.
+<details>
+<summary><b>Can I use this on mobile?</b></summary>
+<br>
+No. Chrome Extensions currently only work on desktop browsers.
+</details>
+
+<details>
+<summary><b>How often does it check for new tasks?</b></summary>
+<br>
+Every 5 minutes, which balances timely notifications with API rate limits.
+</details>
 
 ---
 
 ## 📜 License
 
-This project is licensed under the **MIT License**.  
-See [LICENSE](./LICENSE) for details.
+<p align="center">
+This project is licensed under the <b>MIT License</b>.<br>
+See <a href="./LICENSE">LICENSE</a> for details.
+</p>
 
 ---
 
 ## 📄 Privacy Policy
 
-You can read the full privacy policy here:  
-👉 [PRIVACY-POLICY.md](https://github.com/xPOURY4/Galxe-Task-Monitor/blob/main/blob/main/PRIVACY-POLICY.md)
+<p align="center">
+You can read the full privacy policy here:<br>
+👉 <a href="./PRIVACY-POLICY.md">PRIVACY-POLICY.md</a>
+</p>
 
 ---
 
 ## 🙏 Disclaimer
 
-This project is not affiliated with Galxe.  
+<p align="center">
+This project is not affiliated with Galxe.<br>
 It is an independent open-source tool developed by the community, for the community.
+</p>
 
 ---
 
 <p align="center">
-✨ Made with love by crypto builders ✨
+<b>✨ Made with love by crypto builders ✨</b>
 </p>
