@@ -66,10 +66,10 @@ A Chrome Extension that connects to Galxe's official GraphQL API to monitor sele
 
 ## 🛠️ Installation
 
-### 🌍 Chrome Web Store (Recommended- SOON)
+### 🌍 Chrome Web Store 
 
 <p align="center">
-  <a href="https://chrome.google.com/webstore/">
+  <a href="https://chromewebstore.google.com/detail/pkopghfmjolmobgbhiiopaojgojjpdfp?utm_source=item-share-cb">
     <img src="https://developer.chrome.com/static/docs/webstore/branding/image/iNEddTyWiMfLSwFD6qGq.png" alt="Available in the Chrome Web Store" width="250">
   </a>
 </p>
